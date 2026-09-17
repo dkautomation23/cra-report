@@ -1,0 +1,16 @@
+{
+  "GHSA-jf85-cpcp-j695": {
+    "id": "GHSA-jf85-cpcp-j695",
+    "aliases": ["CVE-2021-44228"],
+    "summary": "Prototype pollution reachable from user-controlled input",
+    "database_specific": { "severity": "CRITICAL" },
+    "affected": [{ "ranges": [{ "events": [{ "introduced": "0" }, { "fixed": "4.17.21" }] }] }]
+  },
+  "GHSA-quiet-0000-0000": {
+    "id": "GHSA-quiet-0000-0000",
+    "aliases": ["CVE-2099-0001"],
+    "summary": "Denial of service in an unreachable code path",
+    "database_specific": { "severity": "LOW" },
+    "affected": [{ "ranges": [{ "events": [{ "introduced": "0" }, { "fixed": "1.0.1" }] }] }]
+  }
+}

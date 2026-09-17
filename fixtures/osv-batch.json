@@ -1,0 +1,7 @@
+{
+  "results": [
+    {},
+    { "vulns": [{ "id": "GHSA-jf85-cpcp-j695" }] },
+    { "vulns": [{ "id": "GHSA-quiet-0000-0000" }] }
+  ]
+}

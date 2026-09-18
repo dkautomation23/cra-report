@@ -13,7 +13,7 @@ npx cra-report sbom.cdx.json --draft early-warning.md
 ```
 
 No runtime dependencies, no API key, nothing to sign up for. TypeScript, Node's
-own test runner, 28 tests.
+own test runner, 31 tests.
 
 ## Why now
 

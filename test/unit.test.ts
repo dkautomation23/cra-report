@@ -336,3 +336,23 @@ describe("talking to the feeds", () => {
     assert.deepEqual(found.get("GHSA-q")!.aliases, ["CVE-2020-1"]);
   });
 });
+
+describe("the first thing a stranger types", () => {
+  const silent = () => {};
+
+  for (const flag of ["--help", "-h"]) {
+    it(`answers \`${flag}\` with the usage text and exit 0`, async () => {
+      let printed = "";
+      const code = await run([flag], undefined, (text) => {
+        printed += text;
+      });
+      assert.equal(code, 0, "asking for help is not a mistake");
+      assert.match(printed, /cra-report - /);
+    });
+  }
+
+  it("exits 2 when nothing at all was named", async () => {
+    const code = await run([], undefined, silent);
+    assert.equal(code, 2, "an empty invocation is a usage error, not help");
+  });
+});

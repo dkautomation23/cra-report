@@ -18,6 +18,9 @@ import {
   type Kev,
 } from "./sources.js";
 
+/** Flags that take no value, so `--help package-lock.json` still means help. */
+const SWITCHES = new Set(["help", "quiet", "all"]);
+
 const USAGE = `cra-report - find the components you ship that are being exploited in the wild,
 and draft the EU Cyber Resilience Act Article 14 notification for them.
 
@@ -50,13 +53,19 @@ function parse(argv: string[]): { input?: string; flags: Map<string, string>; bo
 
   for (let i = 0; i < argv.length; i += 1) {
     const token = argv[i]!;
+    // -h is what people try when --help is too much typing.
+    if (token === "-h") {
+      bools.add("help");
+      continue;
+    }
     if (!token.startsWith("--")) {
       input ??= token;
       continue;
     }
     const name = token.slice(2);
     const next = argv[i + 1];
-    if (next === undefined || next.startsWith("--")) bools.add(name);
+    if (SWITCHES.has(name)) bools.add(name);
+    else if (next === undefined || next.startsWith("--")) bools.add(name);
     else {
       flags.set(name, next);
       i += 1;
@@ -67,9 +76,11 @@ function parse(argv: string[]): { input?: string; flags: Map<string, string>; bo
 
 export async function run(argv: string[], fetcher?: Fetcher, out: (text: string) => void = (t) => process.stdout.write(t)): Promise<number> {
   const args = parse(argv);
-  if (!args.input || args.bools.has("help")) {
+  // Asking for help is not a mistake; naming no lockfile is.
+  const askedForHelp = args.bools.has("help");
+  if (!args.input || askedForHelp) {
     out(USAGE);
-    return args.input ? 0 : 2;
+    return askedForHelp ? 0 : 2;
   }
 
   const timeout = Number(args.flags.get("timeout") ?? 30_000);

@@ -2,6 +2,27 @@
   "name": "cra-report",
   "version": "0.1.0",
   "description": "Find the components you ship that are being exploited in the wild, and draft the EU Cyber Resilience Act Article 14 notification for them.",
+  "keywords": [
+    "cra",
+    "cyber-resilience-act",
+    "sbom",
+    "kev",
+    "vulnerability",
+    "compliance",
+    "enisa",
+    "supply-chain",
+    "cli"
+  ],
+  "homepage": "https://dkautomation23.github.io/tools/cra-report.html",
+  "bugs": {
+    "url": "https://github.com/dkautomation23/cra-report/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkautomation23/cra-report.git"
+  },
+  "license": "MIT",
+  "author": "Dmytro Galko",
   "type": "module",
   "bin": {
     "cra-report": "dist/src/main.js"
@@ -18,24 +39,11 @@
   "scripts": {
     "build": "tsc",
     "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
-    "start": "node dist/src/main.js"
+    "start": "node dist/src/main.js",
+    "prepublishOnly": "npm test"
   },
-  "keywords": [
-    "cra",
-    "cyber-resilience-act",
-    "sbom",
-    "kev",
-    "vulnerability",
-    "compliance",
-    "enisa",
-    "supply-chain",
-    "cli"
-  ],
-  "license": "MIT",
-  "author": "Dmytro Galko",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dkautomation23/cra-report.git"
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

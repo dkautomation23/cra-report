@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml/badge.svg)](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml)
 
+<img src="docs/demo.svg" alt="cra-report finding the two advisories with a deadline among nineteen" width="100%">
+
 Finds the components you ship that are **being exploited right now**, and drafts
 the EU Cyber Resilience Act Article 14 notification for them.
 

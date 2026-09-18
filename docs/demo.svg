@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="771" height="590" viewBox="0 0 771 590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5">
+  <rect width="771" height="590" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <rect width="771" height="34" rx="8" fill="#161b22"/>
+  <rect y="26" width="771" height="8" fill="#161b22"/>
+  <line x1="0" y1="34" x2="771" y2="34" stroke="#30363d"/>
+  <circle cx="18" cy="17" r="5" fill="#ff5f56"/>
+  <circle cx="36" cy="17" r="5" fill="#ffbd2e"/>
+  <circle cx="54" cy="17" r="5" fill="#27c93f"/>
+  <text x="385.5" y="22" fill="#8b949e" text-anchor="middle" font-size="12">cra-report — a dependency tree with Log4Shell</text>
+  <text x="20" y="52" fill="#2dd4bf" xml:space="preserve">$ cra-report sbom.cdx.json</text>
+  <text x="20" y="92" fill="#8b949e" xml:space="preserve">------------------------------------------------------------------------</text>
+  <text x="20" y="112" fill="#c9d1d9" xml:space="preserve">CRA REPORT - fixtures/sbom.cdx.json (CycloneDX SBOM)</text>
+  <text x="20" y="132" fill="#8b949e" xml:space="preserve">------------------------------------------------------------------------</text>
+  <text x="20" y="152" fill="#c9d1d9" xml:space="preserve">3 component(s) read, KEV catalogue of 2026-09-16</text>
+  <text x="20" y="192" fill="#f85149" xml:space="preserve">ACTIVELY EXPLOITED: 2 finding(s) - Article 14 may apply</text>
+  <text x="20" y="232" fill="#c9d1d9" xml:space="preserve">  org.apache.logging.log4j:log4j-core 2.14.1  (Maven)</text>
+  <text x="20" y="252" fill="#c9d1d9" xml:space="preserve">    GHSA-7rjr-3q55-vv33  CVE-2021-45046</text>
+  <text x="20" y="272" fill="#c9d1d9" xml:space="preserve">    Incomplete fix for Apache Log4j vulnerability</text>
+  <text x="20" y="292" fill="#c9d1d9" xml:space="preserve">    in CISA KEV since 2023-05-01  [used in ransomware campaigns]</text>
+  <text x="20" y="312" fill="#c9d1d9" xml:space="preserve">    fixed in 2.16.0, 2.12.2, 1.9.2, 1.10.8, 1.11.11, 2.0.12</text>
+  <text x="20" y="352" fill="#c9d1d9" xml:space="preserve">  org.apache.logging.log4j:log4j-core 2.14.1  (Maven)</text>
+  <text x="20" y="372" fill="#c9d1d9" xml:space="preserve">    GHSA-jfh8-c2jp-5v3q  CVE-2021-44228</text>
+  <text x="20" y="392" fill="#c9d1d9" xml:space="preserve">    Remote code injection in Log4j</text>
+  <text x="20" y="412" fill="#c9d1d9" xml:space="preserve">    in CISA KEV since 2021-12-10  [used in ransomware campaigns]</text>
+  <text x="20" y="432" fill="#c9d1d9" xml:space="preserve">    fixed in 2.15.0, 2.3.1, 2.12.2, 1.9.2, 1.10.8, 1.11.10, 2.0.11</text>
+  <text x="20" y="472" fill="#c9d1d9" xml:space="preserve">2 of these are known to be used in ransomware campaigns.</text>
+  <text x="20" y="492" fill="#c9d1d9" xml:space="preserve">17 further advisory/advisories are known but not observed being exploited.</text>
+  <text x="20" y="532" fill="#c9d1d9" xml:space="preserve">Article 14(1): early warning within 24 hours of becoming aware, fuller notification</text>
+  <text x="20" y="552" fill="#c9d1d9" xml:space="preserve">within 72 hours, via the ENISA Single Reporting Platform. Write the draft with --draft.</text>
+</svg>

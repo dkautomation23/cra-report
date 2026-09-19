@@ -1,6 +1,8 @@
 # cra-report
 
 [![CI](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml/badge.svg)](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dkautomation23/cra-report/badge)](https://scorecard.dev/viewer/?uri=github.com/dkautomation23/cra-report)
+[![CodeQL](https://github.com/dkautomation23/cra-report/actions/workflows/codeql.yml/badge.svg)](https://github.com/dkautomation23/cra-report/actions/workflows/codeql.yml)
 
 <img src="docs/demo.svg" alt="cra-report finding the two advisories with a deadline among nineteen" width="100%">
 
@@ -11,6 +13,10 @@ the EU Cyber Resilience Act Article 14 notification for them.
 npx cra-report package-lock.json
 npx cra-report sbom.cdx.json --draft early-warning.md
 ```
+
+<sup>Not on npm yet — the `npx` form works from the first published
+release. Until then: `git clone`, `npm ci && npm run build`, then
+`node dist/src/main.js`.</sup>
 
 No runtime dependencies, no API key, nothing to sign up for. TypeScript, Node's
 own test runner, 31 tests.

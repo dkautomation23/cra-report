@@ -40,6 +40,37 @@ export interface Fetcher {
   json(url: string, body?: unknown): Promise<unknown>;
 }
 
+/**
+ * The KEV feed is a couple of megabytes and an OSV answer is smaller. A cap
+ * turns "the endpoint answered with something enormous" into an error instead
+ * of the machine's memory, and it is the endpoint's own choice how much it
+ * sends - not ours.
+ */
+export const MAX_FEED_BYTES = 64 * 1024 * 1024;
+
+async function readCapped(response: Response, limit: number, url: string): Promise<string> {
+  if (!response.body) return "";
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let text = "";
+  let bytes = 0;
+  try {
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      bytes += value.byteLength;
+      if (bytes > limit) {
+        await reader.cancel();
+        throw new Error(`${url} returned more than ${limit} bytes; that is not a vulnerability feed`);
+      }
+      text += decoder.decode(value, { stream: true });
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  return text + decoder.decode();
+}
+
 /** The real one. Tests pass their own, so nothing in the suite touches a network. */
 export function httpFetcher(timeoutMs: number): Fetcher {
   return {
@@ -53,7 +84,7 @@ export function httpFetcher(timeoutMs: number): Fetcher {
         signal: AbortSignal.timeout(timeoutMs),
       });
       if (!response.ok) throw new Error(`${url} answered ${response.status} ${response.statusText}`);
-      return response.json();
+      return JSON.parse(await readCapped(response, MAX_FEED_BYTES, url));
     },
   };
 }

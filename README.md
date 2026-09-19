@@ -14,10 +14,6 @@ npx cra-report package-lock.json
 npx cra-report sbom.cdx.json --draft early-warning.md
 ```
 
-<sup>Not on npm yet — the `npx` form works from the first published
-release. Until then: `git clone`, `npm ci && npm run build`, then
-`node dist/src/main.js`.</sup>
-
 No runtime dependencies, no API key, nothing to sign up for. TypeScript, Node's
 own test runner, 31 tests.
 

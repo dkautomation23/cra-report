@@ -3,6 +3,7 @@
 [![CI](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml/badge.svg)](https://github.com/dkautomation23/cra-report/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/dkautomation23/cra-report/badge)](https://scorecard.dev/viewer/?uri=github.com/dkautomation23/cra-report)
 [![CodeQL](https://github.com/dkautomation23/cra-report/actions/workflows/codeql.yml/badge.svg)](https://github.com/dkautomation23/cra-report/actions/workflows/codeql.yml)
+[![npm](https://img.shields.io/npm/v/cra-report)](https://www.npmjs.com/package/cra-report)
 
 <img src="docs/demo.svg" alt="cra-report finding the two advisories with a deadline among nineteen" width="100%">
 
@@ -16,6 +17,14 @@ npx cra-report sbom.cdx.json --draft early-warning.md
 
 No runtime dependencies, no API key, nothing to sign up for. TypeScript, Node's
 own test runner, 31 tests.
+
+Every published version is built and published by the workflow in this
+repository, never from a laptop, and carries a provenance statement recorded in
+Sigstore's public transparency log. Anyone can check that before trusting it:
+
+```bash
+npm audit signatures
+```
 
 ## Why now
 

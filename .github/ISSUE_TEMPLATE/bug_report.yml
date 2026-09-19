@@ -1,0 +1,95 @@
+name: Bug report
+description: Something in cra-report doesn't work as documented.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is for the `cra-report` CLI itself — not for a legal question
+        about whether a finding obliges you to file an Article 14
+        notification. The tool deliberately leaves that to a person; see
+        the README.
+
+  - type: input
+    id: version
+    attributes:
+      label: cra-report version
+      description: >
+        From `npm ls -g cra-report`, `npm ls cra-report`, or the version you
+        ran with npx.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: Output of `node -v`. CI tests 22.x and 24.x.
+      placeholder: "v22.11.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: input-kind
+    attributes:
+      label: Input file type
+      options:
+        - CycloneDX SBOM
+        - SPDX SBOM
+        - package-lock.json
+        - Cargo.lock
+        - requirements.txt
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command
+      description: The full command you ran.
+      render: shell
+      placeholder: |
+        cra-report package-lock.json --draft early-warning.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead
+      description: Full console output or error message, if you can share it.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: input-sample
+    attributes:
+      label: The input file, or the part of it that triggers this
+      description: >
+        A minimal reproduction is best. Do not paste a private SBOM or
+        lockfile in full — trim it to the component(s) involved.
+    validations:
+      required: false

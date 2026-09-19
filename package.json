@@ -1,6 +1,6 @@
 {
   "name": "cra-report",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find the components you ship that are being exploited in the wild, and draft the EU Cyber Resilience Act Article 14 notification for them.",
   "keywords": [
     "cra",

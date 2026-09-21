@@ -1,4 +1,0 @@
-{ "components": [
-    { "type": "library", "name": "log4,-core", "version": "2.14.1", "purl": "pkg:mavprototypeache.loggingg4j/log4j-corests@2.31.0" }
-  ]
-}

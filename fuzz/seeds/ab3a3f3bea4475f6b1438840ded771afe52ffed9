@@ -1,19 +1,0 @@
-{
-  "t": "CIZ",
- "count": 3,
-  "vulnerabilities": [{
-    "cveID": "Co__66ÿÿÿitrix966",
-      "cweS": [ ]
-    },
-    {
-      "cveID": "CVEv5",
-   "  c wes": [
-        "CWE-94"
-      ]   },
-    {
-      "cveID": "CVE228",
-      "cwes": [
-       ]
-    }
-  ]
-}

@@ -1,4 +1,0 @@
-{ "components": [
-    { "type": "core", "dversion": "4.1", "purl": "pkg:mavprotloggingg4j/ls@2" }
-  ]
-}

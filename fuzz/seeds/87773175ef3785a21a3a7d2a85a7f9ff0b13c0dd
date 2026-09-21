@@ -1,7 +1,0 @@
-{
-  "namires": true,
-  "packages": {
-    "": { "name": "ee.0" },
-    "nodedep": { "booleave": "2.3.4" }
- }
-}

@@ -1,20 +1,0 @@
-{
-  "t": "CIZ",
- "count": 3,
-  "vulnerabilities": [{
-    "cveID": "Co__66ÿÿÿitrix NetSca2r -3l4e966",
-      "cweS": [ ]
-    },
-    {
-      "cveID": "CVEv5",
-   "  c wes": [
-        "CWE-94"
-      ]   },
-    {
-      "cveID": "CVE228",
-      "cwes": [
-        "CWE-502"
-      ]
-    }
-  ]
-}

@@ -1,7 +1,0 @@
-{
-  "namis": true,
-  "packages": {
-    "": { "": "ee.0" },
-    "nodedep": {}
- }
-}

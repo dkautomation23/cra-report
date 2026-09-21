@@ -1,7 +1,0 @@
-{
-  "namires": true,
-  "packages": {
-    "": { "name": "example.0" },
-    "nodedep": { "booleaversioe": "2.3.4" }
- }
-}

@@ -1,7 +1,0 @@
-{  "lockfilenpmequires": true,
-  "packages": {
- "": { "ersion":"2."},
-    "node_ules/ljdash": { "vers__pion": "4.17.35" },
-    "node_moule_p": { "v--": "3.3.4" }
-  }
-}

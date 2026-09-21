@@ -1,7 +1,0 @@
-{
-  "name": "example-product",
-  "los": true,
-  "packages": {
-      "node_modules/clean-dep": { "version": "2.3.4" }
-  }
-}

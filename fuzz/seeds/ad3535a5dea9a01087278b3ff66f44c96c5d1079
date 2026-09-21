@@ -1,7 +1,0 @@
-{
-   "packages": {
-    "TTTT": {"name": "e-ct", "version": "1.0.0" },
-    "nop": { "version": "1.0.0" },  "re": {
-   "version": "2.4" }
-  }
-}

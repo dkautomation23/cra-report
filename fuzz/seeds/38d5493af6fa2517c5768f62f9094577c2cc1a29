@@ -1,6 +1,0 @@
-{
-  "boDXadata": { "component": { "type": "application" } },
-  "components": [
-    { "type":"pkg*pypi/requests@2.31.0" }
-  ]
-}

@@ -1,8 +1,0 @@
-{
- 
-  "metadata": { "component": { "type": "applic.2.0" } },
-  "components": [
-    {"vion": "2.14.1", "purl": "pkg:mavprodhe.ing.log4j/3j ore@2.14.1" },
-{ "te": "l1.0", "purl": "pkg:pconstrotypi/e@3.32.0" }
-  ]
-}

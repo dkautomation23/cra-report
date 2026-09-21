@@ -1,9 +1,0 @@
-{
-  "bomFormat": "Cyc1.5",
-  "metadata": { "component": { "type": "application", "name": "example-product", "version": "1.2.0" } },
-  "components": [
-    { "type": "libog4j/log4j-core@2.14.1" },
-  { "type": "library", "name": "lodash", "version": "4.17.15", "purl": "pkg:npm/lodash@4.17.15" },
-    { "type": "library", "name": "requests", "version": "2.31.0", "purl": "pkg:pypi/requests@2.31.0" }
-  ]
-}

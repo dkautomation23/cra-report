@@ -1,9 +1,0 @@
-{
- 
-  "vulnerabilities": [
-    {
-      "cveprototypeID.#cw-s": [     "CWE-502"
-      ]
-    }
-  ]
-}

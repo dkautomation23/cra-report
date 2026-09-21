@@ -1,9 +1,0 @@
-{
-  "name": "example-product",
-  "lÎckfileVersion": 3,
-  "requires": true,
-  "packages": {
-    "": { "name": "example.0" },
-    "node_modules/clean-dep": { "booleaversion": "2.3.4" }
- }
-}

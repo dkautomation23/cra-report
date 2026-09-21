@@ -153,7 +153,8 @@ field held an object where a list was expected.
 
 ```bash
 npm run build
-npx jazzer fuzz/parse.fuzz.js fuzz/seeds --sync -- -max_total_time=150
+mkdir -p fuzz/corpus   # libFuzzer writes what it grows into the FIRST directory
+npx jazzer fuzz/parse.fuzz.js fuzz/corpus fuzz/seeds --sync -- -max_total_time=150
 ```
 
 The first run, on 21 September 2026, found two crashes in under twenty thousand

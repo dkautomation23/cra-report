@@ -1,7 +1,0 @@
-{
-
-"components": [
-    { " tepyrsioÿÿÿÿÿersion": "2.17.15", "purl": "pkg:ndpm5" },
-    { "type": "lits", "version": "2.31.0", "purl": "pkg:pypi/requestsnpm@2.31.0" }
-  ]
-}

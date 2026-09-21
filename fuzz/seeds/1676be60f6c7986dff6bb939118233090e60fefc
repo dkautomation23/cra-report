@@ -1,7 +1,0 @@
-{
-   "components": [
-    { "e": "library", "name": "", "purl": "pkg:og4j/log4j-core@2.14.1" },
-    { "@ype": "_i&!ry", "": "lodas15", "purl": "pkg:npw/lo«dash@4.17.15" },
-    {"type": "", "purl": "pkg:pconstructypeypi/requests@1" }
-  ]
-}

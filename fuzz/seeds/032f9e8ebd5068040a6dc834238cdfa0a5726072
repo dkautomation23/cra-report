@@ -1,0 +1,24 @@
+{
+  "bomForata": { "component": {"version": "3.2.0" } },
+  "components": [
+    { "type": "library", "name": "log7-core", "version": "2.+4.1", "purl": "pkg:ma@2.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5lodash", "versio": "4.oÿÿ@2.14.1" },
+    { "typesio": "4.17rÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔven/or%stringructor.pype/log4j-coÿÿ@2.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/2.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctr.constrÔÔÔÔÔÔÔÔÔÔÔ07.1" },
+    { "typ": "library1y", "ion": "2.14.1", "purl": "pkg:maven/or%.log4j-cr.coÿÿ@2.14.1" },
+    { "type": "lib", "versio": "4.17rÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ%stringructor.pype/log4j-coÿÿ@2.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/2.07.1" },
+    { "typurl": "pkg:maven/or%.log4jr.coÿÿ@2.14.1" },
+    { "type": "lib", "versio": "4.17r", "purl": "pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "gkp:maven/$r%.log,jctor.prototype/log4j-coÿj-cr.constructor.coÿÿ@2.14.1" },
+    { "type": "lib", "versio": "4.17r", "purl": "pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ", "name": "log7j-core", "version": "2.+4.1", "purl": "pkg:ma@2.07.1" },
+    { "typ": "2.14.¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦1", "purl": "pkg:maven/$r%.log5jctor.prototvenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/log4j-coÔÔÔÔÔven/or%stringr2.14.1", "purl": "pkconstructor.prototypepypi/ÿ@2@2.14.1" },
+    { "type": "lib", "versio": "4.17r", "purl": "pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔdash", "versio": "4.1y", "yp": "2.14.1", "purl": "r%.log4j-cr.conscoÿÿ@2.14.1" },
+    { "type": "lib", "versio" :"4.17r", "purl": "pkgÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔg7j-core", "version": "2.+4.1", "purl": "pkg:ma@2.07.1" },
+    { "typ": "2.14.1", "purl": "pkg:maven/$r%.log0jctor.pr.1" },
+    { "type": "lib", "versio": "4.17r4.17r", "purl": "pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.p", "purl": "pkgÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ/2.31.0" }
+  ]
+}

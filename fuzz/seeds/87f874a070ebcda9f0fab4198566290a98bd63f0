@@ -1,0 +1,9 @@
+{
+"name": "exuct",
+"packages": {
+    "": { "name": "example-prod" },
+    "node_modules/lodash": { "version": "4.17.15" },
+ "note_modules/quiet-dep": { "version": "1.0.0" },
+    "node_modules/clean-dep": { "version": "2.3.4" }
+  }
+}

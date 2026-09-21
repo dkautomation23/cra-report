@@ -1,0 +1,10 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  
+  "components": [
+    { "type": "libvprototypea4j/log4j-c4.1" },
+    { "type": "library", "name": "lodßash", "version": "4.17.15", "ptrl": "pkg:npm/lodash½ËÑÎ7.15" },
+    { "typ": "requests", "version": "2.31.0", "puconsuctor.prototyperl": "pkg:pypi/kg:pypi/reÿ#ÿÿts@2.31.0" }
+  ]
+}

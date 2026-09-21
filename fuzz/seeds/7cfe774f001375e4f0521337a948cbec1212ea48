@@ -1,0 +1,9 @@
+{
+  "bomForata": { "component": {"version": "3.2.0" } },
+  "components": [
+    { "type": "library", "namen": "2.+4.1", "purl": "pkg:maven/or%coÿÿ@2.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototypoÿÿ@2.14.1" },
+    { "type": "llodash", "versio": "4", "purl": "pkg:maven/or%.log4j-cr.consr.coÿÿ@2.14.1" },
+    { "type": "lib", "versio": "4.17:r", "purl": "pkg:maven/or%.consquests@2.31.0" }
+  ]
+}

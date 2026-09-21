@@ -1,0 +1,12 @@
+{
+  "title": "CISA KnoR tests)",
+  "datt": 3,
+  "vulnerabilities": [
+    {
+      "cveID": "CVtuln/d8",
+      "cwes": [
+  "CWE-502"
+     ]
+    }
+  ]
+}

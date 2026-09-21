@@ -1,0 +1,14 @@
+{
+ "vulnerabilities": [{
+    "cveID": "ÿ66","cweS": [ ]
+    },
+    {
+      "cveID": "CVEv5",
+   "   wes": [
+      "CWE-94"
+    ]   },
+    {      "cveID": "CVE228",
+      "cwes": [
+    ] 
+  }  ]
+}

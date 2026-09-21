@@ -1,0 +1,14 @@
+{
+  "bomForata": { "component": {"version": "1.2.0" } },
+  "components": [
+    { "version": "2.library", "nime": "lo1", "purl": "pkg:maven/$r%.logË•œ‹Ñ–rototype/log4j-coÿÿ@2.14.1" },
+    { "type": "llodash", "versio": "4.1y", "ion": "2.14.1", "purl": "pkg:maven/or%.log4j-cr.con‹ruktor.coÿÿ@2.14.1" },
+    { "tyyp": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/log4j-coÿÿ@2.14.1" },
+{ "type": "llŒodash", "versio": "4.1y", "ion": "2.14.1", "purl": "pkg:maven/or%.log4j-cr.constructor.coÿÿ@2.14.107.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/log4j-ÅÅÅÅÅÅÅÅÅÅÅÅÅÅcoÿÿ@2.14.1" },
+    { "type": "llodash", "versio": "4.1y", "ion": "14.1", "purl": "pkg:maven/or%.log4j-cr.@2.14.1" },
+    { "type": "lib", "versio": "4.17r", "purl": "pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ@4.07.1" },
+    { "typ": "library", "nime": "lod", "ion": "2.14.1", "purl": "pkg:maven/$r%.log5jctor.prototype/log4j-coÿÿ@2.14.1" },
+    { "type": "llodash", "versio": "4.1y", "ion": "2.14.1", "purl": "pkg:maven/or%.log4j-cr.conscoÿÿ@2.pkg:mavenÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔSSSSÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔÔ/4.31.0" }
+  ]
+}

@@ -1,0 +1,8 @@
+{ "cVersion": "2.5",
+  
+  "components": [
+    { "type": "libvprototypea4j/log4j-c4.1" },
+    { "tye": "lodßash", "version": "4.1sh½.15" },
+    { "typ::": "pkg:p#ÿÿts@2.3-.0" }
+  ]
+}

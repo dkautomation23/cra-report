@@ -1,0 +1,7 @@
+{  "lockfileVerequires": true,
+  "packages": {
+    "": { "ersion": "2.0.0"},
+    "node_ules/ljdash": { "vers__proto__ion": "4.17.35" },
+    "node_moule_modep": { "v--": "2.3.4" }
+  }
+}

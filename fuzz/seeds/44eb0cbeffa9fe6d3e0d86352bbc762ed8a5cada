@@ -1,0 +1,9 @@
+{
+  "name": "example-product",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": { "name": "example-product", "si---------------------------on": "1.0.0" },
+    "node_modules/clean-dep": { "version": "2.3.4" }
+  }
+}

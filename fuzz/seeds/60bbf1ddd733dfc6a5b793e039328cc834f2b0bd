@@ -1,0 +1,17 @@
+{
+  "title": "CMSed Vu0.6796Z",
+  "count": 3,
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-2023-496st.gov/vuln/detail/C-22965",
+      "cwes": [
+        "CWE-94"
+      ]
+    },
+    {
+      "cveID": "CVEprototype21-44228",
+      "cwes": [
+     ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+ 
+  "vulnerabilities": [
+    {
+      "cveprototypeID.#cw-s": [     "CW02"
+      ]
+    }
+  ]
+}

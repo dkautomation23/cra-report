@@ -1,0 +1,9 @@
+{
+  "name": "example-product",
+  "lÎckfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": { "name": "example.0" },
+    "nodedep": { "booleaversion": "2.3.4" }
+ }
+}

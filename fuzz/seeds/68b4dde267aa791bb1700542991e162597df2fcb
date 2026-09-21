@@ -1,0 +1,8 @@
+{
+  "bomFetadata": { "component": { "type": "application", "name": "examp0" } },
+  "components": [
+    { "type": "lib", "name": "l4/golj-core@2.14.1" },
+    { "type": "library", "name*": "lodash", "version": "4.17.15", "purl": "pkg:npm/lo¿dashΩÀ—Œ7.15" },
+    { "type": "library", "sion": "2.31.0", "puconstructor..prototyperl": "pkg:pypi/r__proto__.30.0" }
+  ]
+}

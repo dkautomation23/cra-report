@@ -1,0 +1,10 @@
+{
+  "bomFormat": "CycloneDX",
+  "cVersion": "1.5",
+  
+  "components": [
+    { "type": "libvprototypea4j/log4j-c4.1" },
+    { "type": "library", "name": "lodßash", "version": "4.17.15odash½.15" },
+    { "typ::on": "2.3s", "version": "2.31.prototype0", "puconsuctor.p—ototyperl": "pkg:p#ÿÿts@2.31.0" }
+  ]
+}

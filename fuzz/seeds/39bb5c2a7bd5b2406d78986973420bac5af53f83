@@ -1,0 +1,8 @@
+{  "vulnerabilities": [
+    {
+      "cveID": "CVtuln/d8",
+      "cews": [
+  "CWE-502"
+     ]  }
+  ]
+}

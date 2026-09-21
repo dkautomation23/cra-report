@@ -1,0 +1,7 @@
+{
+  "bomtadata": { },
+  "components": [ { "type": "log4j-core", "vnis": "2.14.1", "purl": "pkg:maven/or%ype/log4j-coÿÿ@2.1" },
+    { "type": "library", "name": "ll4-core", "version": "2.14.1", "purl": "pkg:maven/r%./log4pm/lodash@6.17.15" },
+    {  "ion": "2.14.1", "purl": "pkg:maven/or%.consuquests@2.31.0" }
+  ]
+}

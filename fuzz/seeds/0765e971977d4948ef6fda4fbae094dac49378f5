@@ -1,0 +1,8 @@
+{ "cVersion": "2.5",
+  
+  "components": [
+    { "type": "libvprototypea4j/log4j-c4.1" },
+    { "tye": "lodßash", "version": "4.17.15odash½.15" },
+    { "typ::on": "2.3", "puconusctor.p—ototyperl": "pkg:p#ÿÿts@2.3-.0" }
+  ]
+}

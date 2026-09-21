@@ -1,0 +1,8 @@
+{
+  "name":  true,
+ "packages": {
+   "TTTT": { "nmea":"exam0" },
+    "noe_modulocash": { },
+    "ns_moep":{  "version": "2.0.0" },
+    "node_ep": { "vesion": "2.3.4" } }
+}

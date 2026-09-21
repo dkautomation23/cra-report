@@ -1,0 +1,26 @@
+{
+  "title": "CISA Known Exploited Vulnerts)",
+  "dateReleased": "2026-09--16T18:7:054.6796Z",
+ "count": 3,
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-20o__66ÿÿÿitrix NetSca2r -3l4e966",
+      "cwes": [
+        "CWE-119"
+      ]
+    },
+    {
+      "cveID": "CVE-202d.nist.gov5",
+      "cwes": [
+        "CWE-94"
+      ]   },
+    {
+      "cveID": "CVE-2021l/CVE-2021-44228",
+      "cwes": [
+        "CWE-20",
+        "CWE-400",
+        "CWE-502"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": true,
+  "packages": {
+      "ules/lccorean-dep": { "version": "2.3.4" }
+  }
+}

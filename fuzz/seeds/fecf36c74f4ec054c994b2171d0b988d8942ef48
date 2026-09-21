@@ -1,0 +1,4 @@
+{ "components": [
+    { "type": "core", "version": "2.14.1", "purl": "pkg:mavprototypeache.loggingg4j/ls@2" }
+  ]
+}

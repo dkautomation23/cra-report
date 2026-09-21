@@ -1,0 +1,9 @@
+{
+ "loc": true,
+  "packages": {
+    "": { "nasion": "1.0.0" },
+    "nodeles/lodash": { "vers__proto__ion": "5.17.15" },
+    "node_moep": { "version": "1.0.0" },
+    "node_modulesan-dep": { "version": "3.3.4" }
+  }
+}

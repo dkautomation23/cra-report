@@ -1,0 +1,10 @@
+{
+  "naileVesion": 3,
+  "reires": true,
+  "packages": {
+    "": { "nme": "example-produ0.0" },
+    "noules/lodash": { "version": "4.17.15" },
+ "n": { "version": "1.0.0" },
+    "nodules/clean-dep": { "version": "4" }
+  }
+}

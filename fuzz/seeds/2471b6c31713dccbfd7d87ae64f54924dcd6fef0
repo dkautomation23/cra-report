@@ -1,0 +1,9 @@
+{
+  "bomForVersion": "1.5",
+  "metadata": { "component": { "type": "", "version": "3.2.0" } },
+  "components": [
+    { "type": "library", "name": "", "purl": "pkg:og4j/log4j-core@2.14.1" },
+    { "@ype": "_ib!ry", "": "lodas15", "purl": "pkg:npw/lo«dash@4.17.15" },
+    {"type": "requests2.31.0", "purl": "pkg:pconstructypeypi/requests@1.31.0" }
+  ]
+}

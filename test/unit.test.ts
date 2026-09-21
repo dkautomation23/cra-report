@@ -74,6 +74,43 @@ describe("reading what is in the product", () => {
     assert.deepEqual(components, [{ ecosystem: "npm", name: "lodash", version: "4.17.15" }]);
   });
 
+  it("a wrong-shaped SBOM is zero components, not a TypeError", () => {
+    // Found by the fuzzer on its fourth run, from a valid package-lock.json:
+    // `packages` as an object rather than a list made `for...of` throw
+    // "object is not iterable", which tells the holder of a broken SBOM
+    // nothing. Every reader now says zero instead of ending the run.
+    assert.deepEqual(fromSpdx({ spdxVersion: "SPDX-2.3", packages: {} }), []);
+    assert.deepEqual(fromSpdx({ packages: "nope" }), []);
+    assert.deepEqual(fromSpdx({ packages: [{ externalRefs: "nope" }] }), []);
+    assert.deepEqual(fromCycloneDx({ bomFormat: "CycloneDX", components: {} }), []);
+    assert.deepEqual(fromPackageLock({ lockfileVersion: 3, packages: [] }), []);
+    assert.deepEqual(fromPackageLock({ packages: "nope" }), []);
+  });
+
+  it("a purl with a broken percent-escape keeps its name instead of throwing", () => {
+    // Also the fuzzer: decodeURIComponent throws URIError on a lone % or on
+    // %zz, and that comes from whichever tool wrote the SBOM. One bad name
+    // must not end a report covering a hundred other components.
+    assert.equal(fromPurl("pkg:npm/%zz@1.0.0")?.name, "%zz");
+    assert.equal(fromPurl("pkg:npm/name@1.0%")?.version, "1.0%");
+    assert.equal(fromPurl("pkg:npm/%40scope/pkg@1.0.0")?.name, "@scope/pkg");
+  });
+
+  it("a KEV feed missing cveID loses that entry, not the run", () => {
+    const kev = kevFromJson({
+      dateReleased: "2026-09-01",
+      vulnerabilities: [
+        { cveID: "CVE-2021-44228" },
+        { product: "no cve id here" },
+        null,
+      ],
+    });
+    assert.equal(kev.count, 1);
+    assert.equal(kev.byCve.size, kev.count);
+    assert.deepEqual(kevFromJson({ vulnerabilities: "nope" }).count, 0);
+    assert.deepEqual(kevFromJson(42).count, 0);
+  });
+
   it("reads package-lock.json and skips the project and its workspace links", () => {
     const components = fromPackageLock({
       lockfileVersion: 3,

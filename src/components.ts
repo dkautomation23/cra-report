@@ -35,20 +35,35 @@ const PURL_ECOSYSTEM: Record<string, Ecosystem> = {
   composer: "Packagist",
 };
 
+/**
+ * A purl is percent-encoded, and `decodeURIComponent` throws on an escape that
+ * is not valid - a lone `%`, or `%zz`. That comes from a build tool, not from
+ * this code, and it must not end a report over a hundred other components.
+ * The undecoded text is kept instead: visibly odd in the output, which is the
+ * right outcome for a name that could not be read.
+ */
+function safeDecode(value: string): string {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
 /** `pkg:npm/%40scope/name@1.2.3` -> component. Returns null for a type we cannot map. */
 export function fromPurl(purl: string): Component | null {
   const match = /^pkg:([^/]+)\/(.+)@([^?#]+)/.exec(purl);
   if (!match) return null;
   const ecosystem = PURL_ECOSYSTEM[match[1]!.toLowerCase()];
   if (!ecosystem) return null;
-  const path = decodeURIComponent(match[2]!);
+  const path = safeDecode(match[2]!);
   return {
     ecosystem,
     // Maven is the odd one: a purl writes group/artifact, OSV wants
     // group:artifact, and a lookup with the wrong separator silently finds
     // nothing - which reads exactly like "you are fine".
     name: ecosystem === "Maven" ? path.replace("/", ":") : path,
-    version: decodeURIComponent(match[3]!),
+    version: safeDecode(match[3]!),
   };
 }
 
@@ -65,10 +80,21 @@ function dedupe(components: Component[]): Component[] {
 // SBOM formats
 // --------------------------------------------------------------------------
 
+/**
+ * A generator that writes `"components": {}` instead of `[]` produces a file
+ * that still says CycloneDX at the top, so `load` hands it here. Iterating it
+ * throws "object is not iterable", which tells the person holding a broken
+ * SBOM nothing at all. Treating the wrong shape as no components lets the
+ * report say "0 components" - which is true, and which they can act on.
+ */
+function asArray<T>(value: unknown): T[] {
+  return Array.isArray(value) ? (value as T[]) : [];
+}
+
 export function fromCycloneDx(document: unknown): Component[] {
-  const doc = document as { components?: { purl?: string; name?: string; version?: string }[] };
+  const doc = document as { components?: unknown };
   const found: Component[] = [];
-  for (const entry of doc.components ?? []) {
+  for (const entry of asArray<{ purl?: string }>(doc?.components)) {
     const component = entry.purl ? fromPurl(entry.purl) : null;
     if (component) found.push(component);
   }
@@ -76,13 +102,11 @@ export function fromCycloneDx(document: unknown): Component[] {
 }
 
 export function fromSpdx(document: unknown): Component[] {
-  const doc = document as {
-    packages?: { name?: string; versionInfo?: string; externalRefs?: { referenceLocator?: string; referenceType?: string }[] }[];
-  };
+  const doc = document as { packages?: unknown };
   const found: Component[] = [];
-  for (const entry of doc.packages ?? []) {
-    for (const ref of entry.externalRefs ?? []) {
-      if (ref.referenceType !== "purl" || !ref.referenceLocator) continue;
+  for (const entry of asArray<{ externalRefs?: unknown }>(doc?.packages)) {
+    for (const ref of asArray<{ referenceLocator?: string; referenceType?: string }>(entry?.externalRefs)) {
+      if (ref?.referenceType !== "purl" || !ref.referenceLocator) continue;
       const component = fromPurl(ref.referenceLocator);
       if (component) found.push(component);
     }
@@ -95,11 +119,15 @@ export function fromSpdx(document: unknown): Component[] {
 // --------------------------------------------------------------------------
 
 export function fromPackageLock(document: unknown): Component[] {
-  const doc = document as { packages?: Record<string, { version?: string; dev?: boolean; link?: boolean }> };
+  const doc = document as { packages?: unknown };
+  const packages = doc?.packages;
+  const entries = packages && typeof packages === "object" && !Array.isArray(packages)
+    ? Object.entries(packages as Record<string, { version?: string; link?: boolean }>)
+    : [];
   const found: Component[] = [];
-  for (const [path, entry] of Object.entries(doc.packages ?? {})) {
+  for (const [path, entry] of entries) {
     // "" is the project itself; a link is a workspace pointer, not a release.
-    if (!path || entry.link || !entry.version) continue;
+    if (!path || !entry || typeof entry !== "object" || entry.link || !entry.version) continue;
     const name = path.slice(path.lastIndexOf("node_modules/") + "node_modules/".length);
     if (!name) continue;
     found.push({ ecosystem: "npm", name, version: entry.version });

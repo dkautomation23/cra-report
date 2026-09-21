@@ -1,0 +1,10 @@
+{
+  "name": "example-product",
+  "lockfileVersion": 1,
+  "requires": true,
+  "packages": {
+    "": { "name": "example-product", "version": "1.0.0" },
+    "node_modules/lodash": { "vers__proto__ion": "4.17.15" },
+    "node_modules/quiet-dep": { "versi-------------------------": "2.3.4" }
+  }
+}

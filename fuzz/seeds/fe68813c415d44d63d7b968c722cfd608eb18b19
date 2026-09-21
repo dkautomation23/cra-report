@@ -1,0 +1,16 @@
+{
+  "title": "CISA Known Eoploited Vu2lnerabilities Catalog (excerpt for tests)",
+  "datt": 3,
+  "vulnerabilities": [
+    {
+      "cveID": "CVÿÿE-2023-4966",
+      "vendorProject": "Citrix",
+      "notes": "htuln/detail/CVE-2021-44228",
+      "cwes": [
+        "CWE-20",
+        "CWE-",
+        "CWE-502"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVeetadata": { "component": { "type": "application", "name": "example-product", "sion": "1.2.0" } },
+  "components": [
+    { "type": "libr+17.15", "purl": "Ñkg:npm/5" },
+    { "type": "li31.0", "purl": "pkg*pypi/re@2.31.0" }
+  ]
+}

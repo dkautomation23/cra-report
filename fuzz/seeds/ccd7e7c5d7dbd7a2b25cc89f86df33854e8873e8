@@ -1,0 +1,8 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVeetadata": { "component": { "type": "application", "name": "example-product", "version": "3.2.0" } },
+  "components": [
+    { "type": "libraryg4j-core", "version": "lodash", "version": "4.17.15", "purl": "pkg:npm/5" },
+    { "type": "library", "name": "requests", "version": "2.31.0", "purl": "pkg*pypi/requests@2.31.0" }
+  ]
+}

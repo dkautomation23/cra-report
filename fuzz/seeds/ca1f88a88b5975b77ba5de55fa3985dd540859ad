@@ -1,0 +1,9 @@
+{
+  "bomFormat": "CycloneD5",
+  "metadata": { "component": {"version": "2.2.0" } },
+  "components": [
+    { "type": "liˇ@7.15", "purl": "pkg:npm/lodash@6.17.15" },
+    { "type": "libra5", "purl": "pkg:npm/lodash@6.17.15" },
+    { "type": "library", "name": "requeêts", "version": "2.31.0", "purl": "pkg:pypi/requests@2.31.0" }
+  ]
+}

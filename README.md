@@ -16,7 +16,7 @@ npx cra-report sbom.cdx.json --draft early-warning.md
 ```
 
 No runtime dependencies, no API key, nothing to sign up for. TypeScript, Node's
-own test runner, 31 tests.
+own test runner, 34 tests.
 
 Every published version is built and published by the workflow in this
 repository, never from a laptop, and carries a provenance statement recorded in
@@ -143,6 +143,37 @@ cd cra-report && npm install && npm test
 
 Node 22+. The test suite replays recorded API responses, so it passes with no
 network at all.
+
+## Fuzzed, and it found two real ones
+
+The input to this tool is always a file something else generated: an SBOM from
+a build system, a lock file from a package manager, a KEV feed fetched from
+CISA. A report a regulator may read must not turn into a stack trace because a
+field held an object where a list was expected.
+
+```bash
+npm run build
+npx jazzer fuzz/parse.fuzz.js fuzz/seeds --sync -- -max_total_time=150
+```
+
+The first run, on 21 September 2026, found two crashes in under twenty thousand
+executions:
+
+- **`packages: {}` instead of `[]`** — `for...of` threw `object is not
+  iterable`. A valid `package-lock.json` handed to the SPDX reader was enough
+  to trigger it, and the message told the holder of a broken SBOM nothing.
+  Every reader now treats a wrong shape as zero components, which is true and
+  actionable.
+- **`decodeURIComponent` on a purl** — a lone `%` or `%zz` in a package name
+  throws `URIError`, ending a report covering a hundred other components. The
+  undecoded name is kept instead: visibly odd in the output, which is the right
+  outcome for a name that could not be read.
+
+Both are now regression tests. After the fixes: **2,000,000 executions in 92
+seconds, no crash.** ClusterFuzzLite re-runs the target on every pull request
+against the code that changed — config in
+[`.clusterfuzzlite/`](.clusterfuzzlite/), target in
+[`fuzz/parse.fuzz.js`](fuzz/parse.fuzz.js).
 
 ## Honest limits
 

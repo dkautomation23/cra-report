@@ -1,0 +1,6 @@
+{
+  "boDXadata": { "component": { "type": "application" } },
+  "components": [
+    { "type":"pkg*pyp0" }
+  ]
+}

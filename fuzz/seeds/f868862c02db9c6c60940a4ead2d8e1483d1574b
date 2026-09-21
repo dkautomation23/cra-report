@@ -1,0 +1,7 @@
+{
+  "name": "example-product",
+  "los": true,
+  "packages": {
+      "ules/lcean-dep": { "version": "2.3.4" }
+  }
+}

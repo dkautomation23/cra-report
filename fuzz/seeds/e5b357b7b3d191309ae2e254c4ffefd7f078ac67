@@ -1,0 +1,21 @@
+{
+  "title": "CI  Vu]nZ",
+  "c": 3,
+  "vulnerabilities": [
+    {
+      "cveID" :"CVE-ü23-4966",     "cwes": [
+ ]
+    },
+    {
+      "cveID": "22-ty2023-10-36","cwes": [
+         ]
+    },
+    {
+      "cveID": "CV-2022-44228",      "cwes": [       ]
+    },
+    {
+      "cveID": "CV-2022-44228",      "cwes": [
+        "CWE-20", "502"   ]
+    }
+  ]
+}

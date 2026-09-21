@@ -1,0 +1,8 @@
+{
+  "bomFetada": { "nt": { "me": "examp0" } },
+  "components": [
+    { "type": "lib", "name": "l8re@214.1" },
+    { "type": "libra.17.15", "purl": "g:ËÑî7.15" },
+    { "ty": "libproto__.30.0" }
+  ]
+}

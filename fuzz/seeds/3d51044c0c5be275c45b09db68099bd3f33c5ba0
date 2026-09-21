@@ -1,0 +1,8 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "metadata": { "component": { "type": "application" } },
+  "components": [
+    { "type":"pkg*pypi/requests@2.31.0" }
+  ]
+}

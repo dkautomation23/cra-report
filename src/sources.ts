@@ -103,9 +103,16 @@ export async function loadKev(fetcher: Fetcher): Promise<Kev> {
 }
 
 export function kevFromJson(document: unknown): Kev {
-  const feed = document as { dateReleased?: string; vulnerabilities?: KevEntry[] };
+  const feed = document as { dateReleased?: string; vulnerabilities?: unknown };
   const byCve = new Map<string, KevEntry>();
-  for (const entry of feed.vulnerabilities ?? []) byCve.set(entry.cveID.toUpperCase(), entry);
+  // CISA's feed is a public file fetched over the network. An entry without a
+  // cveID, or a `vulnerabilities` that is not a list, must leave the catalogue
+  // smaller - not end the run with a TypeError on a field name.
+  const entries = Array.isArray(feed?.vulnerabilities) ? (feed.vulnerabilities as KevEntry[]) : [];
+  for (const entry of entries) {
+    if (!entry || typeof entry.cveID !== "string" || !entry.cveID) continue;
+    byCve.set(entry.cveID.toUpperCase(), entry);
+  }
   return { released: (feed.dateReleased ?? "unknown").slice(0, 10), count: byCve.size, byCve };
 }
 

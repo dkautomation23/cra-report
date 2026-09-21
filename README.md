@@ -169,6 +169,18 @@ This is the part that matters in a compliance tool, so it is longer than usual.
   be answered, KEV is a public file, and nothing else leaves the machine.
 - **Not legal advice.** It is a tool that reads two public feeds. Whether and what
   to notify is a decision for your organisation.
+- **This repository's own Scorecard reports fourteen vulnerabilities, and that
+  is the fixtures.** `fixtures/sbom.cdx.json` names log4j-core 2.14.1, lodash
+  4.17.15 and requests 2.31.0 on purpose — a report generator with nothing to
+  report demonstrates nothing — and a scanner walking the repository reads them
+  as this project's own bill of materials. Nothing shipped here depends on any
+  of them: `npm audit` and `npm audit --omit=dev` both report zero. The
+  fourteen are listed one by one with a reason in
+  [`osv-scanner.toml`](osv-scanner.toml) rather than deleted, because deleting
+  them would remove the only worked example in this README. It is the same
+  class of mistake this tool exists to prevent, arriving from the other
+  direction: a scanner cannot tell a dependency from a test input, and a score
+  built on that distinction has to be read rather than believed.
 
 ## Licence
 

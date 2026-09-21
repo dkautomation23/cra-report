@@ -1,0 +1,54 @@
+# The vulnerable components in fixtures/ are the demo input, not dependencies.
+#
+# `fixtures/sbom.cdx.json` deliberately names log4j-core 2.14.1, lodash 4.17.15
+# and requests 2.31.0, and `fixtures/package-lock.json` an old lodash, because a
+# report generator with nothing to report demonstrates nothing. A scanner that
+# walks this repository reads those files as a bill of materials for the
+# repository itself and concludes the project is vulnerable to fourteen
+# advisories. Nothing cra-report ships depends on any of them: `npm audit
+# --omit=dev` and `npm audit` both report zero.
+#
+# Listed with a reason rather than deleted: deleting the fixtures would remove
+# the only worked example in the README.
+[[IgnoredVulns]]
+id = "GHSA-jfh8-c2jp-5v3q"
+reason = "Log4Shell, in fixtures/sbom.cdx.json - the demo SBOM this tool reports on"
+[[IgnoredVulns]]
+id = "GHSA-29mw-wpgm-hmr9"
+reason = "fixture lodash, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-35jh-r3h4-6jhm"
+reason = "fixture lodash, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-f23m-r3pf-42rh"
+reason = "fixture lodash, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-p6mc-m468-83gw"
+reason = "fixture lodash, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-3pxv-7cmr-fjr4"
+reason = "fixture lodash, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-6hg6-v5c8-fphq"
+reason = "fixture log4j-core, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-7rjr-3q55-vv33"
+reason = "fixture log4j-core, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-8489-44mv-ggj8"
+reason = "fixture log4j-core, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-p6xc-xr62-6r2g"
+reason = "fixture log4j-core, not a dependency"
+[[IgnoredVulns]]
+id = "GHSA-vc5p-v9hr-52mj"
+reason = "fixture log4j-core, not a dependency"
+[[IgnoredVulns]]
+id = "PYSEC-2026-1872"
+reason = "fixture requests 2.31.0, not a dependency - this repository ships no Python"
+[[IgnoredVulns]]
+id = "PYSEC-2026-1873"
+reason = "fixture requests 2.31.0, not a dependency - this repository ships no Python"
+[[IgnoredVulns]]
+id = "PYSEC-2026-2275"
+reason = "fixture requests 2.31.0, not a dependency - this repository ships no Python"

@@ -179,10 +179,11 @@ executions:
   outcome for a name that could not be read.
 
 Both are now regression tests. After the fixes: **2,000,000 executions in 92
-seconds, no crash.** ClusterFuzzLite re-runs the target on every pull request
-against the code that changed — config in
-[`.clusterfuzzlite/`](.clusterfuzzlite/), target in
-[`fuzz/parse.fuzz.js`](fuzz/parse.fuzz.js).
+seconds, no crash.** Runs for sixty seconds in CI on every push, in the ordinary test workflow.
+Not through ClusterFuzzLite: it supports c, c++, go, rust, python, jvm and
+swift, and this is JavaScript. Two commits went into arguing with its
+sanitizer setting before anyone checked whether the language was on the list.
+The target is [`fuzz/parse.fuzz.js`](fuzz/parse.fuzz.js).
 
 ## Honest limits
 

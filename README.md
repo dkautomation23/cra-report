@@ -30,14 +30,22 @@ npm audit signatures
 
 Since **11 September 2026**, a manufacturer placing a product with digital
 elements on the EU market must notify an *actively exploited* vulnerability in it
-to ENISA — an early warning within **24 hours** of becoming aware, a fuller
-notification within 72. Machine-readable SBOMs follow on 11 December 2027, but
-the reporting clock is already running, and you cannot meet a 24-hour deadline by
-starting to work out what is in your product on the day.
+— an early warning within **24 hours** of becoming aware, a fuller notification
+within 72. Article 14 sends that notification to the CSIRT designated as
+coordinator *and* to ENISA, through the single reporting platform. Machine-readable
+SBOMs follow on 11 December 2027, but the clock is already running, and you cannot
+meet a 24-hour deadline by starting to work out what is in your product on the day.
 
 The hard part is not finding vulnerabilities. Any scanner will hand you a
-hundred. The hard part is telling which of them starts a statutory clock — and
-that is a different question, with a different answer, from "is it CRITICAL".
+hundred. The hard part is deciding which of them could start a statutory clock —
+a different question, with a different answer, from "is it CRITICAL".
+
+**This tool narrows the hundred to the few worth a human's attention. It does not
+decide whether the clock started.** That turns on whether the affected component
+is reachable in the product you placed on the market and on when you became
+aware, and no tool reading a lock file can answer either. What it gives you is
+the short list, with the evidence attached, fast enough to be useful inside 24
+hours.
 
 ## What it actually does
 
